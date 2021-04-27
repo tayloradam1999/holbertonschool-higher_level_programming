@@ -5,7 +5,7 @@ def fizzbuzz():
         if x % 3 == 0 and x % 5 != 0:
             print("Fizz", end=' ')
         if x % 5 == 0 and x % 3 != 0:
-            print("Buzz", end=' ')
+            print("Buzz", end='')
             if x != 100:
                 print(" ", end='')
         if x % 5 == 0 and x % 3 == 0:
