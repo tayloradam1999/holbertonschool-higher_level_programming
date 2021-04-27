@@ -1,5 +1,3 @@
 #!/usr/bin/python3
-char = 97
-while char <= 122:
+for char in range(97, 123):
     print(chr(char), end = '')
-    char += 1
