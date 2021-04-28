@@ -1,4 +1,6 @@
 #include "lists.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * revArray - Reverses an array
@@ -21,6 +23,27 @@ int *revArray(int *arr)
 	free(arr);
 	return (newArr);
 		
+}
+
+/**
+ * listint_len - Returns the number of elements in a list
+ * @h: Pointer to header
+ * Return: Number of elements
+ */
+
+size_t listint_len(listint_t *h)
+{
+	size_t x = 0;
+
+	if (!h)
+		return (x);
+	while (h->next)
+	{
+		x++;
+		h = h->next;
+	}
+	x++;
+	return (x);
 }
 
 /**

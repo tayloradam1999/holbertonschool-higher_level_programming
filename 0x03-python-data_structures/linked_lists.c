@@ -25,27 +25,6 @@ size_t print_listint(const listint_t *h)
 }
 
 /**
- * listint_len - Returns the number of elements in a list
- * @h: Pointer to header
- * Return: Number of elements
- */
-
-size_t listint_len(listint_t *h)
-{
-	size_t x = 0;
-
-	if (!h)
-		return (x);
-	while (h->next)
-	{
-		x++;
-		h = h->next;
-	}
-	x++;
-	return (x);
-}
-
-/**
  * add_nodeint_end - adds a new node at the end of a listint_t list
  * @head: pointer to pointer of first node of listint_t list
  * @n: integer to be included in new node
