@@ -34,11 +34,14 @@ size_t listint_len(listint_t *h)
 {
 	size_t x = 0;
 
-	while (h)
+	if (!h)
+		return (x);
+	while (h->next)
 	{
-		h = h->next;
 		x++;
+		h = h->next;
 	}
+	x++;
 	return (x);
 }
 
