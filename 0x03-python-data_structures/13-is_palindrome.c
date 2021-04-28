@@ -15,8 +15,10 @@ int *revArray(int *arr)
 	newArr = malloc(sizeof(int) * len);
 	if (!newArr)
 		return (NULL);
+	ii = len - 1;
 	for (i = 0; i < len; i++, ii--)
 		newArr[i] = arr[ii];
+	free(arr);
 	return (newArr);
 		
 }
@@ -30,7 +32,7 @@ int *revArray(int *arr)
 int is_palindrome(listint_t **head)
 {
 	size_t len = listint_len(*head), i = 0;
-	listint_t *mid;
+	listint_t *mid = *head;
 	int *arr1, *arr2;
 
 	if (!head || !*head)
