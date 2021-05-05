@@ -64,5 +64,6 @@ This module defines an integer addition function ``add_integer(a, b=98)``.
     -20
 
 ::
->>> add_integer(2)
-100
+
+    >>> add_integer(2)
+    100
