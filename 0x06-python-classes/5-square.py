@@ -12,9 +12,7 @@ This module handles TypeErrors and ValueErrors."""
 class Square:
     """Class that initalizes 'size' as a private instance attribute."""
     def __init__(self, size=0):
-        """init 'size' for 'Square' Class.
-        'Size' must be an int, otherwise raise a TypeError.
-        If 'size' is less than 0, raise a ValueError."""
+        """init 'size' for 'Square' Class."""
         self.__size = size
 
     @property
@@ -24,7 +22,9 @@ class Square:
 
     @size.setter
     def size(self, value):
-        """This def sets the size of a square object."""
+        """This def sets the size of a square object.
+        'Size' must be an int, otherwise raise a TypeError.
+        If 'size' is less than 0, raise a ValueError."""
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
