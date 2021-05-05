@@ -1,0 +1,68 @@
+# 0-add_integer.txt
+# Adam Taylor <2680@holbertonschool.com>
+
+=========================
+Usage of 0-add_integer.py
+=========================
+
+This module defines an integer addition function ``add_integer(a, b=98)``.
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+    >>> add_integer(5, 10)
+    15
+
+::
+
+
+    >>> add_integer(5, 10.5)
+    15
+
+::
+
+
+    >>> add_integer(5, "10.5")
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+::
+
+    >>> add_integer("5", 10.5)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+::
+
+    >>> add_integer(-10, 10)
+    0
+
+::
+
+
+    >>> add_integer(20, -10)
+    10
+
+::
+
+    >>> add_integer(10, 20, 30)
+    Traceback (most recent call last):
+    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+::
+
+    >>> add_integer(None, 10)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+::
+
+    >>> add_integer(10.9, 10.8)
+    20
+
+::
+
+    >>> add_integer(-10.9, -10.8)
+    -20
+
+::
+>>> add_integer(2)
+100
