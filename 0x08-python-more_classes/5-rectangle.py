@@ -28,7 +28,7 @@ class Rectangle:
         """Returns a string representation of the rectangle"""
         return 'Rectangle(%d, %d)' % (self.width, self.height)
 
-    def __delete__(self):
+    def __del__(self):
         """Prints the message 'Bye Rectangle...' when an instance of
         'Rectangle' is deleted"""
         print("Bye Rectangle...")
