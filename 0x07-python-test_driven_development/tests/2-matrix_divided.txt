@@ -42,7 +42,7 @@ This module defines a matrix division function ``matrix_divided(matrix, div)``.
     >>> print(matrix_divided(matrix, 3))
     Traceback (most recent call last):
     ...
-    TypeError: matrix must be a matrix (list of lists) of integers/floats
+    TypeError: matrix must be a matrix (list of lists) of integers'floats
 
 ::
 
@@ -50,7 +50,7 @@ This module defines a matrix division function ``matrix_divided(matrix, div)``.
     >>> print(matrix_divided(matrix, 3))
     Traceback (most recent call last):
     ...
-    TypeError: matrix must be a matrix (list of lists) of integers/floats
+    TypeError: matrix must be a matrix (list of lists) of integers'floats
 
 ::
 
@@ -58,7 +58,7 @@ This module defines a matrix division function ``matrix_divided(matrix, div)``.
     >>> print(matrix_divided(matrix, 3))
     Traceback (most recent call last):
     ...
-    TypeError: matrix must be a matrix (list of lists) of integers/floats
+    TypeError: matrix must be a matrix (list of lists) of integers'floats
 
 ::
 
@@ -71,7 +71,7 @@ This module defines a matrix division function ``matrix_divided(matrix, div)``.
     >>> matrix = [1, 1, 1]
     >>> print(matrix_divided(matrix, 3))
     Traceback (most recent call last):
-    TypeError: matrix must be a matrix (list of lists) of integers/floats
+    TypeError: matrix must be a matrix (list of lists) of integers'floats
 
 ::
 
@@ -81,7 +81,7 @@ This module defines a matrix division function ``matrix_divided(matrix, div)``.
     ... ]
     >>> print(matrix_divided(matrix, 3))
     Traceback (most recent call last):
-    TypeError: matrix must be a matrix (list of lists) of integers/floats
+    TypeError: matrix must be a matrix (list of lists) of integers'floats
 
 ::
 
