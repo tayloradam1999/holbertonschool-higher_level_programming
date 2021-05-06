@@ -1,0 +1,85 @@
+# 5-text_indentation.txt
+# Adam Taylor <2680@holbertonschool.com>
+
+==============================
+Usage of 5-text_indentation.py
+==============================
+
+This module defines a text-indentation function `text_indentation(text)`
+
+Text is printed to stdout with two new lines after each of the characters
+`.` , `?` , `:`.
+
+::
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+    >>> text_indentation("Hello, World?")
+    Hello, World?
+
+::
+
+    >>> text_indentation("              Kyle.")
+                  Kyle.
+
+::
+
+    >>> text_indentation("   ")
+    <BLANKLINE>
+
+::
+
+    >>> text_indentation("Kyle.   ")
+    Kyle.
+    <BLANKLINE>
+    <BLANKLINE>
+       
+
+::
+
+    >>> text_indentation("   Kyle.   Gross.   ")
+       Kyle.
+    <BLANKLINE>
+      Gross.
+    <BLANKLINE>
+    <BLANKLINE>
+       
+
+::
+
+    >>> text_indentation("Kyle Gross is handsome")
+    Kyle Gross is handsome
+
+::
+
+    >>> text_indentation("Kyle\n Gross.")
+    Kyle
+     Gross.
+
+::
+
+    >>> text_indentation("\n\n\n Kyle Gross.")
+    <BLANKLINE>
+    <BLANKLINE>
+    <BLANKLINE>
+     Kyle Gross.
+
+::
+
+    >>> text_indentation(10)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+::
+
+    >>> text_indentation({"Kyle": 10, "Gross": 100})
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+::
+
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
