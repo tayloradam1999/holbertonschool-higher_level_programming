@@ -10,7 +10,7 @@ class Rectangle:
     """Defines a rectangle with a private instance attribute 'width'
     and 'height'
     Defines public class varibale 'number_of_instances' that
-    increases by 1 whenever '__init__" is called, and 
+    increases by 1 whenever '__init__" is called, and
     decreases bv 1 whenever '__del__' is called."""
     number_of_instances = 0
 
