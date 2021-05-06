@@ -31,7 +31,7 @@ class Rectangle:
     def __del__(self):
         """Prints the message 'Bye Rectangle...' when an instance of
         'Rectangle' is deleted"""
-        print("Bye Rectangle...")
+        print("Bye rectangle...")
 
     @property
     def width(self):
