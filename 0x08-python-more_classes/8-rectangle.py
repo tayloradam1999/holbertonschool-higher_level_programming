@@ -28,10 +28,10 @@ class Rectangle:
             rect_2 is not an instance of 'Rectangle'
         Returns rect_1 if both have the same area"""
         if isinstance(rect_1, Rectangle) is False:
-            raise TypeError("ect_1 must be an instance of Rectangle")
+            raise TypeError("rect_1 must be an instance of Rectangle")
         if isinstance(rect_2, Rectangle) is False:
-            raise TypeError("ect_2 must be an instance of Rectangle")
-        if rect_1.area() > rect_2.area():
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        if rect_1.area() >= rect_2.area():
             return rect_1
         else:
             return rect_2
