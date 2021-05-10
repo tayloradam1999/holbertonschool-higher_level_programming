@@ -20,7 +20,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertRaises(TypeError, max_integer("max_integer"))
         self.assertRaises(TypeError, max_integer((500, 5000)))
         self.assertRaises(TypeError, max_integer([1.2, 1.3, 1.4, 1.5]))
-        self.assertRaises(ValueError, max_integer([1.2]), 10)
+        self.assertRaises(TypeError, max_integer([1.2]))
 
     def test_Mid(self):
         """Tests for max int in the middle of a list"""
