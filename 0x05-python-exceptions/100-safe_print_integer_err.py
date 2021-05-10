@@ -8,7 +8,7 @@ Return: True if value has been correctly printed (value was an int)
 """
 
 import sys
-def safe_print_integer(value):
+def safe_print_integer_err(value):
     try:
         print("{:d}".format(value))
     except Exception as x:
