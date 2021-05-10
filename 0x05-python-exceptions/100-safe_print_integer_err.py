@@ -9,10 +9,10 @@ Return: True if value has been correctly printed (value was an int)
 
 import sys
 def safe_print_integer_err(value):
+    import sys
     try:
         print("{:d}".format(value))
-    except Exception as x:
-        print("Exception: {}".format(x))
-        return False
-    else:
         return True
+    except Exception as x:
+        print("Exception: {}".format(x), file=sys.stderr)
+        return False
