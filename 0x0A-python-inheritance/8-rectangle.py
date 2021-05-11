@@ -10,10 +10,10 @@ BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
-    """Inherits from BaseGeometry class
-    Instantiated with width and height
-    width and heigth must be private
-    width and height must be positive integers, validated by
+    """-Inherits from BaseGeometry class
+    -Instantiated with width and height
+    -width and heigth must be private
+    -width and height must be positive integers, validated by
     integer_validator in BaseGeometry"""
     def __init__(self, width, height):
         super().__init__()
