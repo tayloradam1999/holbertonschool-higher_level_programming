@@ -1,0 +1,55 @@
+# 1-my_list.txt
+# Adam Taylor <2680@holbertonschool.com>
+
+=====================
+Usage of 1-my_list.py
+=====================
+
+This module writes a class that inherits another class.
+It has a public instance method 'print_sorted(self)' that
+prints the list, but in ascending order.
+
+    >>> MyList = __import__('1-my_list').MyList
+
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(5)
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 5]
+
+::
+
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append("string")
+    >>> my_list.print_sorted()
+    Traceback (most recent call last):
+    ...
+    TypeError: unorderable types: str() < int()
+
+::
+
+    >>> print(my_list)
+    [1, 4, 2, 3, 'string']
+
+::
+
+    >>> my_list = MyList()
+    >>> my_list.print_sorted()
+    []
+
+::
+
+    >>> my_list.append(-100)
+    >>> my_list.append(0)
+    >>> my_list.append(-50)
+    >>> my_list.append(50)
+    >>> my_list.append(100)
+    >>> my_list.print_sorted()
+    [-100, -50, 0, 50, 100]
