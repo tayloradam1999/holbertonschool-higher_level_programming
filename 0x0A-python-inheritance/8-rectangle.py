@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 
 """
-This module creates an empty class 'BaseGeometry'
-Public instance method 'area(self)' that raises an exception with the message
-'area() is not implemented'
+This module creates a class 'Rectangle' that inherits attributes
+from the class 'BaseGeometry'
 """
 
 
