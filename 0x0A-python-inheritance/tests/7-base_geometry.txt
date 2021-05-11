@@ -6,7 +6,7 @@ Usage of 7-base_geometry.py
 ===========================
 
 This module creates a class 'BaseGeometry' that has
-two seperate functions that raise different exceptions
+two seperate functions that raise different exceptions and errors
 
     >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
     >>> bg = BaseGeometry()
