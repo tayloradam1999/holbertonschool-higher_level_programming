@@ -85,6 +85,13 @@ two seperate functions that raise different exceptions and errors
 
 ::
 
+    >>> bg.integer_validator("hank", False)
+    Traceback (most recent call last):
+    ...
+    ValueError: hank must be greater than 0
+
+::
+
     >>> bg.integer_validator("hank", None)
     Traceback (most recent call last):
     ...
