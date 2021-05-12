@@ -19,7 +19,7 @@ class MyInt(int):
 
     def __ne__(self, other):
         """Inverts != operator"""
-        if self.integer > 0:
+        if self.integer < 0:
             if self.integer is other:
                 return True
             else:
