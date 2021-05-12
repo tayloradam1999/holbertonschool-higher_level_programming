@@ -15,8 +15,8 @@ class Square(Rectangle):
     'integer_validator'
     -area method must be implemented"""
     def __init__(self, size):
-        super().__init__(size, size)
         self.integer_validator("size", size)
+        super().__init__(size, size)
         self.__size = size
 
     def area(self):
