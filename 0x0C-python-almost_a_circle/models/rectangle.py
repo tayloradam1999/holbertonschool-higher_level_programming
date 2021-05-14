@@ -15,10 +15,10 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """Constructor method"""
         super().__init__(id)
-        __width = width
-        __height = height
-        __x = x
-        __y = y
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
 
     @property
     def width(self):
