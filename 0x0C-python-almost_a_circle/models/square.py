@@ -22,12 +22,12 @@ class Square(Rectangle):
     def __str__(self):
         """Returns our attributes values"""
         return '[Square] (%d) %d/%d - %d' % (self.id, self.x,
-                                             self.y, self.height)
+                                             self.y, self.size)
 
     @property
     def size(self):
         """Getter method for size"""
-        return self.__size
+        return self.__width
 
     @size.setter
     def size(self, size):
@@ -37,4 +37,5 @@ class Square(Rectangle):
         elif size <= 0:
             raise ValueError("width must be > 0")
         else:
-            self.__size = size
+            self.__width = size
+            self.__height = size
