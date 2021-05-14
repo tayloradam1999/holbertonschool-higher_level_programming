@@ -31,19 +31,19 @@ class Rectangle(Base):
         """Assigns an argument to each attribute"""
         largs = list(args)
         if len(largs) == 5:
-            self.__y = largs[4]
+            self.y = largs[4]
             largs.pop()
         if len(largs) == 4:
-            self.__x = largs[3]
+            self.x = largs[3]
             largs.pop()
         if len(largs) == 3:
-            self.__height = largs[2]
+            self.height = largs[2]
             largs.pop()
         if len(largs) == 2:
-            self.__width = args[1]
+            self.width = largs[1]
             largs.pop()
         if len(largs) == 1:
-            self.__x = args[0]
+            self.id = largs[0]
 
     def display(self):
         """Prints our rectangle to stdout with the character '#'"""
