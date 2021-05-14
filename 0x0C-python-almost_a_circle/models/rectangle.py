@@ -27,23 +27,16 @@ class Rectangle(Base):
         area = self.__width * self.__height
         return area
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Assigns an argument to each attribute"""
+        if args is None or len(args) == 0:
+            for i in kwargs:
+                if hasattr(self, i):
+                    setattr(self, i, kwargs[i])
         largs = list(args)
-        if len(largs) == 5:
-            self.y = largs[4]
-            largs.pop()
-        if len(largs) == 4:
-            self.x = largs[3]
-            largs.pop()
-        if len(largs) == 3:
-            self.height = largs[2]
-            largs.pop()
-        if len(largs) == 2:
-            self.width = largs[1]
-            largs.pop()
-        if len(largs) == 1:
-            self.id = largs[0]
+        latts = ["id", "width", "height", "x", "y"]
+        for i in range(len(largs)):
+            setattr(self, latts[i], largs[i])
 
     def display(self):
         """Prints our rectangle to stdout with the character '#'"""
