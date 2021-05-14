@@ -27,8 +27,10 @@ class Rectangle(Base):
 
     def display(self):
         """Prints our rectangle to stdout with the character '#'"""
-        for i in range(self.__height):
-            for j in range(self.__width):
+        print("\n" * self.y, end="")
+        for i in range(self.height):
+            print(" " * self.x, end="")
+            for j in range(self.width):
                 print("#", end="")
             print()
 
