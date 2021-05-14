@@ -9,9 +9,11 @@ from models.base import Base
 
 
 class Rectangle(Base):
+
     """This is a class that inherits from 'Base'
     This class has 4 private instance attributes
     This class also has a constructor"""
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """Constructor method"""
         super().__init__(id)
@@ -24,6 +26,24 @@ class Rectangle(Base):
         """Returns area of rectangle"""
         area = self.__width * self.__height
         return area
+
+    def update(self, *args):
+        """Assigns an argument to each attribute"""
+        largs = list(args)
+        if len(largs) == 5:
+            self.__y = largs[4]
+            largs.pop()
+        if len(largs) == 4:
+            self.__x = largs[3]
+            largs.pop()
+        if len(largs) == 3:
+            self.__height = largs[2]
+            largs.pop()
+        if len(largs) == 2:
+            self.__width = args[1]
+            largs.pop()
+        if len(largs) == 1:
+            self.__x = args[0]
 
     def display(self):
         """Prints our rectangle to stdout with the character '#'"""
