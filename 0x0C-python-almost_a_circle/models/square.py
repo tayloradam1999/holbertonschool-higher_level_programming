@@ -6,6 +6,7 @@ This module creates a class 'Square'
 
 
 from models.rectangle import Rectangle
+import inspect
 
 
 class Square(Rectangle):
@@ -23,6 +24,15 @@ class Square(Rectangle):
         """Returns our attributes values"""
         return '[Square] (%d) %d/%d - %d' % (self.id, self.x,
                                              self.y, self.size)
+
+    def to_dictionary(self):
+        """Returns the dictionary representation of a Square instance"""
+        my_dict = {}
+        for i in inspect.getmembers(self):
+            if not i[0].startswith('_'):
+                if not inspect.ismethod(i[1]):
+                    my_dict[i[0]] = i[1]
+        return my_dict
 
     def update(self, *args, **kwargs):
         """Assigns an argument to each attribute"""
