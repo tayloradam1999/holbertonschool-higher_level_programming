@@ -5,7 +5,11 @@ This module creates a class 'Base'
 """
 
 
+import json
+
+
 class Base:
+
     """This class has a constructor and a private class attribute"""
     __nb_objects = 0
 
@@ -16,3 +20,12 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """Returns the JSON string representation of list_dictionaries"""
+        if list_dictionaries is None or len(list_dictionaries) == 0:
+            return "[]"
+        for item in list_dictionaries:
+            return item
+        # my_str = json.dumps(list_dictionaries)
