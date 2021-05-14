@@ -7,8 +7,8 @@ This module creates a class 'Base'
 
 
 class Base:
-    __nb_objects = 0
     """This class has a constructor and a private class attribute"""
+    __nb_objects = 0
     def __init__(self, id=None):
         """Constructor method"""
         if id is not None:
