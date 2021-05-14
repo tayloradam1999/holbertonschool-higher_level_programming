@@ -25,6 +25,13 @@ class Rectangle(Base):
         area = self.__width * self.__height
         return area
 
+    def display(self):
+        """Prints our rectangle to stdout with the character '#'"""
+        for i in range(self.__height):
+            for j in range(self.__width):
+                print("#", end="")
+            print()
+
     @property
     def width(self):
         """Property getter for width"""
