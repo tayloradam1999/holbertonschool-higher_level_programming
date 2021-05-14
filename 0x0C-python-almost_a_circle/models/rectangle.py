@@ -28,7 +28,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, width):
         """Property setter for width with validator"""
-        if not isinstance(width, int):
+        if type(width) is not int:
             raise TypeError("width must be an integer")
         elif width <= 0:
             raise ValueError("width must be > 0")
@@ -43,7 +43,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, height):
         """Property setter for width with validator"""
-        if not isinstance(height, int):
+        if type(height) is not int:
             raise TypeError("width must be an integer")
         elif height <= 0:
             raise ValueError("width must be > 0")
@@ -58,7 +58,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, x):
         """Property setter for x with validator"""
-        if not isinstance(x, int):
+        if type(x) is not int:
             raise TypeError("x must be an integer")
         elif x <= 0:
             raise ValueError("x must be >= 0")
@@ -73,7 +73,7 @@ class Rectangle(Base):
     @y.setter
     def y(self, y):
         """Property setter for y with validator"""
-        if not isinstance(y, int):
+        if type(y) is not int:
             raise TypeError("y must be an integer")
         elif y <= 0:
             raise ValueError("y must be >= 0")
