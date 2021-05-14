@@ -6,6 +6,7 @@ This module creates a class 'Rectangle'
 
 
 from models.base import Base
+import inspect
 
 
 class Rectangle(Base):
@@ -26,6 +27,15 @@ class Rectangle(Base):
         """Returns area of rectangle"""
         area = self.__width * self.__height
         return area
+
+    def to_dictionary(self):
+        """Returns the dictionary representation of a Rectangle"""
+        my_dict = {}
+        for i in inspect.getmembers(self):
+            if not i[0].startswith('_'):
+                if not inspect.ismethod(i[1]):
+                    my_dict[i[0]] = i[1]
+        return my_dict
 
     def update(self, *args, **kwargs):
         """Assigns an argument to each attribute"""
