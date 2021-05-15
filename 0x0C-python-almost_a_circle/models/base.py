@@ -42,3 +42,11 @@ class Base:
             j_str = "[]"
         with open(filename, "w") as fh:
             fh.write(j_str)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Returns the list of the JSON string representation 'json_string'"""
+        if json_string:
+            return json.loads(json_string)
+        else:
+            return []
