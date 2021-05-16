@@ -60,8 +60,8 @@ class Rectangle(Base):
 
     def __str__(self):
         """Overrides the return of our class to the desired format"""
-        return '[Rectangle] (%d) %d/%d - %d/%d' % (self.id, self.x, self.y,
-                                                   self.width, self.height)
+        return '[Rectangle] ({}) {}/{} - {}/{}'.format(self.id, self.x, self.y,
+                                                       self.width, self.height)
 
     @property
     def width(self):
