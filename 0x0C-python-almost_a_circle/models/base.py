@@ -6,6 +6,7 @@ This module creates a class 'Base'
 
 
 import json
+import os
 
 
 class Base:
@@ -61,3 +62,21 @@ class Base:
             dummy = cls(1, 1)
             dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """Returns a list of instances"""
+        filename = cls.__name__ + ".json"
+        if os.path.exists(filename):
+            with open(filename, 'r') as fh:
+                j_str = fh.read()
+            my_list = []
+            my_list = cls.from_json_string(j_str)
+            obj_list = []
+            for items in my_list:
+                dict_items = dict(items)
+                obj = cls.create(**dict_items)
+                obj_list.append(obj)
+            return obj_list
+        else:
+            return my_list
