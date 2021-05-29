@@ -8,8 +8,6 @@ Class definition of a State and instance <Base = declarative_base()>
 from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
-engine = create_engine('mysql://root:root@localhost:3306/hbtn_0e_6_usa',
-                       echo=False)
 Base = declarative_base()
 
 
