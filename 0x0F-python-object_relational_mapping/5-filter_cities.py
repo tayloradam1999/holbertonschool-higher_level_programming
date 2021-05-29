@@ -25,6 +25,8 @@ if __name__ == "__main__":
                 'states': argv[4]
             })
         data = cursor.fetchall()
+    if len(data) == 0:
+        print("")
     for i in range(len(data)):
         if i != len(data) - 1:
             print("{}, ".format(data[i][0]), end="")
