@@ -6,7 +6,6 @@ List all <State> objects from the database <hbtn_0e_6_usa>
 
 
 from sqlalchemy import create_engine, Column, Integer, String
-from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 from sys import argv
@@ -20,4 +19,4 @@ if __name__ == "__main__":
     for states in data:
         if "a" in states.name:
             session.delete(states)
-            session.commit()
+    session.commit()
