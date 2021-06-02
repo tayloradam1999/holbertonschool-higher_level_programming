@@ -1,0 +1,1 @@
+We are now being introduced to the JavaScript programming language!
