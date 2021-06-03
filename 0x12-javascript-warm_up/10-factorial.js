@@ -1,7 +1,7 @@
 #!/usr/bin/node
-myArgs = process.argv.slice(2);
+const myArgs = process.argv.slice(2);
 if (isNaN(myArgs[0])) {
-  console.log("%i", 1);
+  console.log('%i', 1);
 } else {
   console.log(factorial(myArgs[0]));
 }
