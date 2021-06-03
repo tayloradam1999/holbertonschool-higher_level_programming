@@ -1,0 +1,1 @@
+This directory will hold answers to our 2nd JavaScript project.
