@@ -11,7 +11,7 @@ class Rectangle {
     let myStr = '';
     for (let x = 0; x < this.width; x++) {
       myStr += 'X';
-    } for (let y = 0; y < myStr.length; y++) {
+    } for (let y = 0; y < this.height; y++) {
       console.log(myStr);
     }
   }
