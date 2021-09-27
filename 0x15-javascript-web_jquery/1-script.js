@@ -1,4 +1,6 @@
 #!/usr/bin/node
 /* change header to red without document.querySelector */
 
-$("header").css("color", "#FF000");
+$(function() {
+	$("header").css("color", "#FF0000");
+});
