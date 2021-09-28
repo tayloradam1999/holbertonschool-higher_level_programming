@@ -1,5 +1,5 @@
 #!/usr/bin/node
-/* Fetches value of 'hello' from URL DIV#hello */
+/* Fetches value of 'hello' from URL */
 $.get('https://fourtonfish.com/hellosalut/?lang=fr', function(data) {
-    $('DIV#hello').html(data.hello);
+    $('#hello').html(data.hello);
 });
